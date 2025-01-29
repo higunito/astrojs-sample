@@ -1,0 +1,28 @@
+---
+type Nav = {
+  name: string;
+  path: string;
+};
+const navList: Nav[] = [
+  {
+    name: "home",
+    path: "/"
+  },
+  {
+    name: "sample",
+    path: "/sample"
+  },
+  {
+    name: "dir",
+    path: "/dir"
+  },
+  {
+    name: "contact",
+    path: "/dir/contact"
+  }
+]  
+---
+
+<ul>
+  {navList.map((nav) => <li><a href={nav.path}>{nav.name}</a></li>)}
+</ul>
